@@ -3,7 +3,7 @@ services:
 
 script:
   - chmod +x build-docker.sh
-  - ./build-docker.sh
+  - ./build-docker.sh -c config
 
 notifications:
   email:
