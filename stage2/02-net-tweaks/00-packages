@@ -1,0 +1,15 @@
+wpasupplicant wireless-tools firmware-atheros firmware-brcm80211 firmware-libertas firmware-misc-nonfree firmware-realtek
+raspberrypi-net-mods
+dhcpcd5
+net-tools
+git
+vim
+libsystemd-dev
+python3
+python3-systemd
+python3-netifaces
+virtualenv
+dnsmasq
+mitmproxy
+tcpdump
+tshark
