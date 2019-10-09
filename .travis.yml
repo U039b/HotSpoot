@@ -2,7 +2,7 @@ services:
   - docker
 
 script:
-  - bash docker-build.sh
+  - bash build-docker.sh
 
 notifications:
   email:
