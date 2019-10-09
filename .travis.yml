@@ -1,0 +1,12 @@
+services:
+  - docker
+
+script:
+  - bash docker-build.sh
+
+notifications:
+  email:
+    recipients:
+      - build@0x39b.fr
+    on_success: always
+    on_failure: always
