@@ -5,3 +5,7 @@ postrun.sh
 .pc
 *-pc
 apt-cacher-ng/
+stage3/
+stage4/
+stage5/
+

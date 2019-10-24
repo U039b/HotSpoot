@@ -27,3 +27,4 @@ ethtool
 ntfs-3g
 pciutils
 iptables-persistent
+apt-transport-https

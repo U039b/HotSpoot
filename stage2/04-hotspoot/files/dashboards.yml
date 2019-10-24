@@ -1,0 +1,13 @@
+apiVersion: 1
+
+providers:
+- name: 'HotSpoot dashboard provider - /var/lib/grafana/dashboards'
+  orgId: 1
+  folder: ''
+  folderUid: ''
+  type: file
+  disableDeletion: true
+  editable: true
+  updateIntervalSeconds: 1
+  options:
+    path: /var/lib/grafana/dashboards
