@@ -4,11 +4,14 @@
 install -v -d					        "${ROOTFS_DIR}/etc/dnsmasq.d"
 install -v -m 600 files/dnsmasq.conf	"${ROOTFS_DIR}/etc/dnsmasq.d/hotspoot.conf"
 
+# HotSpoot WiFi
+install -v -m 600 files/hostapd.conf	"${ROOTFS_DIR}/etc/hostapd/hostapd.conf"
+
 install -v -m 600 files/hotspoot.py	    "${ROOTFS_DIR}/home/pi/hotspoot.py"
 # install -v -m 600 files/hotspoot-dashboard.json	    "${ROOTFS_DIR}/home/pi/hotspoot-dashboard.json"
 
 mkdir -p "${ROOTFS_DIR}/etc/network/interfaces.d"
-install -v -m 600 files/eth1	        "${ROOTFS_DIR}/etc/network/interfaces.d/eth1"
+install -v -m 600 files/wlan1	        "${ROOTFS_DIR}/etc/network/interfaces.d/wlan1"
 
 mkdir -p "${ROOTFS_DIR}/etc/iptables"
 install -v -m 600 files/rules.v4	    "${ROOTFS_DIR}/etc/iptables/rules.v4"

@@ -68,5 +68,5 @@ class HotSpoot:
 
 sniffer = HotSpoot()
 
-cap = pyshark.LiveCapture(interface='eth1')
+cap = pyshark.LiveCapture(interface='wlan1')
 cap.apply_on_packets(sniffer.sniff)

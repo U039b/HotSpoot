@@ -8,7 +8,7 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
-        "type": "dashboard" 
+        "type": "dashboard"
       }
     ]
   },
@@ -29,309 +29,8 @@
       },
       "id": 18,
       "panels": [],
-      "title": "En voyage !",
+      "title": "",
       "type": "row"
-    },
-    {
-      "cacheTimeout": null,
-      "content": "\n# Réseau : **HotSpoot** - mot de passe : **esther-codes**\n\n\n\n",
-      "datasource": null,
-      "gridPos": {
-        "h": 3,
-        "w": 16,
-        "x": 0,
-        "y": 1
-      },
-      "id": 16,
-      "links": [],
-      "mode": "markdown",
-      "options": {},
-      "targets": [
-        {
-          "alias": "",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "dns_query",
-          "orderByTime": "ASC",
-          "policy": "autogen",
-          "query": "SELECT * FROM \"autogen\".\"dns_query\" GROUP BY value ORDER BY time DESC LIMIT 1",
-          "rawQuery": true,
-          "refId": "A",
-          "resultFormat": "table",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "count"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Réseau wi-fi du PiRogue",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 8,
-        "x": 16,
-        "y": 1
-      },
-      "id": 15,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": " ?",
-      "postfixFontSize": "50%",
-      "prefix": "T'es qui",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "request",
-      "targets": [
-        {
-          "alias": "",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "dns_query",
-          "orderByTime": "ASC",
-          "policy": "autogen",
-          "query": "SELECT * FROM \"autogen\".\"dns_query\" GROUP BY value ORDER BY time DESC LIMIT 1",
-          "rawQuery": true,
-          "refId": "A",
-          "resultFormat": "table",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "count"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "",
-      "transparent": true,
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "first"
-    },
-    {
-      "aliasColors": {},
-      "bars": true,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fill": 2,
-      "fillGradient": 4,
-      "gridPos": {
-        "h": 5,
-        "w": 8,
-        "x": 16,
-        "y": 3
-      },
-      "id": 2,
-      "interval": "60s",
-      "legend": {
-        "alignAsTable": false,
-        "avg": true,
-        "current": false,
-        "max": true,
-        "min": false,
-        "show": false,
-        "total": false,
-        "values": true
-      },
-      "lines": false,
-      "linewidth": 10,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 3,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Requêtes DNS",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "dns_query",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "sum"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "",
-      "tooltip": {
-        "shared": false,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "transparent": true,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
     },
     {
       "cacheTimeout": null,
@@ -357,7 +56,7 @@
         "h": 4,
         "w": 4,
         "x": 0,
-        "y": 4
+        "y": 1
       },
       "id": 10,
       "interval": null,
@@ -377,7 +76,7 @@
       "nullPointMode": "connected",
       "nullText": null,
       "options": {},
-      "postfix": " mobiles ont envoyé",
+      "postfix": " mobiles have sent",
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
@@ -472,7 +171,7 @@
         "h": 4,
         "w": 4,
         "x": 4,
-        "y": 4
+        "y": 1
       },
       "id": 13,
       "interval": "",
@@ -492,7 +191,7 @@
       "nullPointMode": "connected",
       "nullText": null,
       "options": {},
-      "postfix": " requêtes",
+      "postfix": " requests",
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
@@ -580,7 +279,7 @@
         "h": 4,
         "w": 4,
         "x": 8,
-        "y": 4
+        "y": 1
       },
       "id": 12,
       "interval": null,
@@ -600,9 +299,9 @@
       "nullPointMode": "connected",
       "nullText": null,
       "options": {},
-      "postfix": " serveurs",
+      "postfix": " servers",
       "postfixFontSize": "50%",
-      "prefix": "et contacté",
+      "prefix": "reached",
       "prefixFontSize": "50%",
       "rangeMaps": [
         {
@@ -695,7 +394,7 @@
         "h": 4,
         "w": 4,
         "x": 12,
-        "y": 4
+        "y": 1
       },
       "id": 11,
       "interval": null,
@@ -715,9 +414,9 @@
       "nullPointMode": "connected",
       "nullText": null,
       "options": {},
-      "postfix": " pays",
+      "postfix": " countries",
       "postfixFontSize": "50%",
-      "prefix": "dans ",
+      "prefix": "in ",
       "prefixFontSize": "50%",
       "rangeMaps": [
         {
@@ -787,6 +486,127 @@
       "valueName": "current"
     },
     {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 2,
+      "fillGradient": 4,
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 1
+      },
+      "id": 2,
+      "interval": "60s",
+      "legend": {
+        "alignAsTable": false,
+        "avg": true,
+        "current": false,
+        "max": true,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": true
+      },
+      "lines": false,
+      "linewidth": 10,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 3,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "DNS request",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "dns_query",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
       "columns": [
         {
           "text": "Current",
@@ -799,7 +619,7 @@
         "h": 11,
         "w": 9,
         "x": 0,
-        "y": 8
+        "y": 5
       },
       "id": 8,
       "interval": "",
@@ -812,7 +632,7 @@
       },
       "styles": [
         {
-          "alias": "Serveur",
+          "alias": "Servers",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -823,7 +643,7 @@
           "decimals": null,
           "link": true,
           "linkTargetBlank": true,
-          "linkTooltip": "T'es qui ?",
+          "linkTooltip": "Who are you?",
           "linkUrl": "https://duckduckgo.com/?q=${__cell}",
           "mappingType": 1,
           "pattern": "Metric",
@@ -832,7 +652,7 @@
           "unit": "short"
         },
         {
-          "alias": "Nombre de requêtes",
+          "alias": "#requests",
           "colorMode": "value",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -888,7 +708,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Nos mobiles discutent avec des serveurs",
+      "title": "",
       "transform": "timeseries_aggregations",
       "transparent": true,
       "type": "table"
@@ -908,7 +728,7 @@
         "h": 18,
         "w": 15,
         "x": 9,
-        "y": 8
+        "y": 6
       },
       "hideEmpty": false,
       "hideZero": false,
@@ -995,7 +815,7 @@
         "h": 7,
         "w": 9,
         "x": 0,
-        "y": 19
+        "y": 16
       },
       "id": 4,
       "interval": "",
@@ -1009,7 +829,7 @@
       },
       "styles": [
         {
-          "alias": "Nombre de requêtes",
+          "alias": "#requests",
           "colorMode": "value",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -1029,7 +849,7 @@
           "unit": "short"
         },
         {
-          "alias": "Entreprise",
+          "alias": "Companies",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1040,7 +860,7 @@
           "decimals": 2,
           "link": true,
           "linkTargetBlank": true,
-          "linkTooltip": "Vas chercher !",
+          "linkTooltip": "Who are you?",
           "linkUrl": "https://duckduckgo.com/?q=${__cell}",
           "mappingType": 1,
           "pattern": "Metric",
@@ -1098,7 +918,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "... appartenant à",
+      "title": "",
       "transform": "timeseries_aggregations",
       "transparent": true,
       "type": "table"
@@ -1110,11 +930,11 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 24
       },
       "id": 20,
       "panels": [],
-      "title": "Où c'est que c'est ?",
+      "title": "History",
       "type": "row"
     },
     {
@@ -1125,7 +945,7 @@
         "h": 21,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 25
       },
       "id": 22,
       "interval": "",
@@ -1138,7 +958,7 @@
       },
       "styles": [
         {
-          "alias": "Mobile",
+          "alias": "Client",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1154,7 +974,7 @@
           "unit": "short"
         },
         {
-          "alias": "Pays",
+          "alias": "Country",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1186,7 +1006,7 @@
           "unit": "short"
         },
         {
-          "alias": "Entreprise",
+          "alias": "Company",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1202,7 +1022,7 @@
           "unit": "short"
         },
         {
-          "alias": "Serveur",
+          "alias": "Server",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1218,7 +1038,7 @@
           "unit": "short"
         },
         {
-          "alias": "Adresse",
+          "alias": "Address",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1250,7 +1070,7 @@
           "unit": "short"
         },
         {
-          "alias": "Temps",
+          "alias": "Time",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1309,7 +1129,7 @@
       "type": "table"
     }
   ],
-  "refresh": "",
+  "refresh": "1s",
   "schemaVersion": 20,
   "style": "dark",
   "tags": [],
@@ -1317,7 +1137,7 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -1336,7 +1156,7 @@
     ]
   },
   "timezone": "",
-  "title": "PiRogue",
+  "title": "HotSpoot",
   "uid": "cc9p1RWgz",
-  "version": 50
+  "version": 53
 }
