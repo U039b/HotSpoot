@@ -1,13 +1,19 @@
 services:
-  - docker
-
+- docker
 script:
-  - chmod +x build-docker.sh
-  - ./build-docker.sh -c config
-
+- chmod +x build-docker.sh
+- "./build-docker.sh -c config"
 notifications:
   email:
     recipients:
-      - build@0x39b.fr
+    - build@0x39b.fr
     on_success: always
     on_failure: always
+deploy:
+  provider: releases
+  api_key:
+    secure: BQA/xj/q9DO/plNBOd4fmEgaiTiV3mG3VpmGoQk86QC5Ar/+aZF2/O/0isGDXTDvXX10YAM0zQtnakJxk7tx275OtUgzKG3d5c6pxMeGsltZfcFL2V20R/97yJb6bGNGtBOxl7Fq6JcidMBFKAs9VMdp+dlvA3T9ky2KivYVXy3pZlDWmNgGn3j6R8egBvKiEbSS4rrh9jcF/DUbknPLQZ5ZAEh/a6VEnCG+tRLVlHT9092dLjhfBl1G+eF/nsjsoJXV9/YcQP0sPJirhTmNkERNZLJ7wvKoyILmH5G7oR0Jsr5GGVxw4dfG4QOXxvfxjFvoiApt00n4AjLylayvBlkNUd1KdLvl2q5u+VIZDxwC+UlFLvWUTWdvT5s14oNCgzW4L2JYZaEZSJD7b0p3Q5u89tKEDwMsI4jP91uKXH73cnE28L9jsNMIeJzEd0xaUXSSvIlX6q/k6vcq5zUNw4GtqTumZCqJYMOJjoqLb3fIlmndLmC+Ds6Cj+FxBfkYuYcCPIxQNxf1nILhZrFG/1LNBC3GxBNQEulzHCLqX92tDgXaEcWjTDPcSaepP9XML12mwBB+6/eI4hf6Z2t5Uea6XstNvwL+bQktM7Hmv/YH/WYPcxTD4eE0i8J8Skajww0gTO/ybA+wxUWL737wCyQlSDPJakIcQKNcSN+5hhU=
+  file_glob: true
+  file: deploy/*
+  on:
+    repo: U039b/HotSpoot
